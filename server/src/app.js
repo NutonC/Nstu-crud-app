@@ -8,18 +8,20 @@ const adminRouter = require('./routes/admin/admin.router');
 
 const app = express();
 
-app.use(helmet());
+app.use(helmet(
+    {
+        contentSecurityPolicy: false
+    }
+));
 app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json());
-// app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/admin', adminRouter);
-// app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-// });
-app.get('/', (req, res) => {
-    res.status(200).send('Its working');
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 module.exports = app;

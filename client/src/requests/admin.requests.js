@@ -1,4 +1,4 @@
-const API_URL = process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:8000';
+const API_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8000';
 
 export async function httpPostAddTeacher(teacherData) {
     try {
@@ -9,7 +9,8 @@ export async function httpPostAddTeacher(teacherData) {
           },
           body: JSON.stringify(teacherData),
         });
-        return resp.json();
+
+        return await resp.json();
     } catch(err) {
         return {
             ok: false,
