@@ -1,0 +1,29 @@
+{
+  "name": "material-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "start": "npm run deploy",
+    "test": "npm test --prefix server && npm test --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/nuton123/material-ui-crud-app/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://gitlab.com/nuton123/material-ui-crud-app/issues"
+  },
+  "homepage": "https://gitlab.com/nuton123/material-ui-crud-app/"
+}
