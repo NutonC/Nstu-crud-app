@@ -36,37 +36,3 @@ export const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
-export const columns = [
-  { title: 'Sequence No', field: 'orderInAlphabet', type: 'numeric' },
-  {
-    title: 'Type',
-    field: 'alphabetType',
-    lookup: { Consonant: 'Consonant', Vowel: 'Vowel', Compound: 'Compound' },
-    initialEditValue: 'Consonant',
-  },
-  { title: 'Alphabet', field: 'value' },
-  {
-    title: 'Unicode Name',
-    field: 'unicodeName',
-    lookup: { Chakma: 'Chakma', Bengali: 'Bengali', English: 'English' },
-    initialEditValue: 'Chakma',
-  },
-  { title: 'CreatedBy', field: 'createdBy', type: 'string' },
-  { title: 'UpdatedBy', field: 'updatedBy', type: 'string' },
-  { title: 'DeletedBy', field: 'deletedBy', type: 'string' },
-  { title: 'Active', field: 'active', type: 'boolean', initialEditValue: true },
-];
-
-export const options = {
-  search: true,
-  headerStyle: {
-    textAlign: 'center',
-    backgroundColor: '#EEE',
-  },
-  cellStyle: {
-    textAlign: 'center',
-  },
-  rowStyle: {
-    backgroundColor: '#fafafa',
-  },
-};

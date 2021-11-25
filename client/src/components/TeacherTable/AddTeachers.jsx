@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MaterialTable from "material-table";
 import { Grid, Container } from "@material-ui/core";
 
-import { tableIcons } from "./table-config";
+import { tableIcons } from "../../lib/material-table-config";
 
 import {
   httpPostAddTeacher,
