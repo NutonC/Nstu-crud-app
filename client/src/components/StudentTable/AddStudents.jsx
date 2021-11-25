@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MaterialTable from "material-table";
+import MaterialTable from '@material-table/core';
 import { Grid, Container } from "@material-ui/core";
 
 import { tableIcons } from "../../lib/material-table-config";
